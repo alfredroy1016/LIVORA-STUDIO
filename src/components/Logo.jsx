@@ -18,9 +18,31 @@ export default function Logo({ size = 40, showText = true, light = false, classN
         <rect x="78" y="34" width="11" height="11" fill="#B08D57"/>
       </svg>
       {showText && (
-        <div>
-          <p style={{ fontFamily:"'Playfair Display',serif", letterSpacing:'.15em', color: nameColor, fontSize:'1.4rem', fontWeight:700, lineHeight:1, margin:0 }}>LIVORA</p>
-          <p style={{ fontFamily:"'Inter',sans-serif", fontSize:'.5rem', letterSpacing:'.4em', color: subColor, textTransform:'uppercase', marginTop:'3px', margin:0 }}>Interior Studio</p>
+        <div className="flex flex-col justify-center">
+          <p style={{ 
+            fontFamily:"'Playfair Display', serif", 
+            letterSpacing:'.18em', 
+            color: nameColor, 
+            fontSize: size > 30 ? '1.5rem' : '1.15rem', 
+            fontWeight:700, 
+            lineHeight:1, 
+            margin:0,
+            textTransform: 'uppercase'
+          }}>
+            LIVORA
+          </p>
+          <p style={{ 
+            fontFamily:"'Inter', sans-serif", 
+            fontSize: size > 30 ? '.55rem' : '.45rem', 
+            letterSpacing:'.45em', 
+            color: subColor, 
+            textTransform:'uppercase', 
+            marginTop:'2px', 
+            margin:0,
+            fontWeight: 500
+          }}>
+            Interior Studio
+          </p>
         </div>
       )}
     </div>

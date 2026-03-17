@@ -33,7 +33,7 @@ export default function Navbar() {
         backdropFilter: 'blur(20px)',
       }}>
         <a href="#home" style={{ textDecoration:'none' }} onClick={e=>{ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); setOpen(false) }}>
-          <Logo size={scrolled ? 24 : 28} showText={false} />
+          <Logo size={scrolled ? 24 : 28} showText={true} light={true} />
         </a>
 
         <ul className="hidden lg:flex navbar-menu">

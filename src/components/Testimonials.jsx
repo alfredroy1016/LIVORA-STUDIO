@@ -46,7 +46,7 @@ export default function Testimonials() {
           style={{
             '--swiper-pagination-color': T.gold,
             '--swiper-pagination-bullet-inactive-color': T.textMuted,
-            '--swiper-pagination-bullet-inactive-opacity': '0.3',
+            '--swiper-pagination-bullet-inactive-opacity': '0.1',
           }}
         >
           {TESTIMONIALS.map((t, i) => (
