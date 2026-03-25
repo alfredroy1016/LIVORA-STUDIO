@@ -1,24 +1,31 @@
-// LIVORA Bright Luxury Theme
+// LIVORA Warm Beige Luxury Theme
 export const T = {
   // Backgrounds
-  bgBeige:   '#F8F6F0', // Soft, luxurious off-white/beige
-  bgWhite:   '#FFFFFF', // Pure white for cards/alternating sections
-  bgDark:    '#111111', // Very deep charcoal for heavy contrast sections like footer
+  bgBeige: '#F5F1E8',
+  bgWhite: '#FFFDF8',
+  bgDark: '#1E1A17',
+  bgHero: '#0F0D0A',
+  bgLoader: '#0F0D0A',
 
   // Text
-  dark:      '#1A1A1A', // Primary text on light backgrounds
-  textMuted: '#666666', // Secondary text on light backgrounds
-  white:     '#FFFFFF', // Text on dark backgrounds
+  dark: '#1E1A17',
+  textMuted: '#6F675F',
+  white: '#FFFDF8',
 
   // Gold
-  gold:      '#B08D57',
-  goldLight: '#C9A96E',
-  goldBorder:'rgba(176,141,87,0.25)',
+  gold: '#B08D57',
+  goldLight: '#D2B48C',
+  goldSoft: '#D9BF91',
+  goldBorder: 'rgba(176,141,87,0.18)',
 
   // Structure
-  btnRadius: '0px',   // Sharp luxury
-  cardRadius:'0px',   // Sharp luxury
-  
+  btnRadius: '12px',
+  cardRadius: '18px',
+
+  // Typography
+  fontBody: "'Inter', sans-serif",
+  fontDisplay: "'Playfair Display', serif",
+
   // Shadows
-  shadowSoft: '0 10px 40px rgba(0,0,0,0.04)',
+  shadowSoft: '0 12px 35px rgba(62,45,24,0.08)',
 }

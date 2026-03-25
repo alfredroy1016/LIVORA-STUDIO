@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa'
-import { T } from '../theme'
+import { T } from '../../theme'
 import { useState } from 'react'
 
 const WA = 'https://wa.me/918921179724'
@@ -10,7 +10,7 @@ export default function FloatingButtons() {
   const [hovered, setHovered] = useState(null)
 
   return (
-    <div className="fixed bottom-8 right-8 z-[1000] flex flex-col gap-5 items-end">
+    <div className="fixed bottom-4 right-4 z-[1000] flex flex-col gap-3 items-end sm:bottom-8 sm:right-8 sm:gap-5">
       
       {/* WhatsApp Button */}
       <div className="relative flex items-center group">
@@ -20,7 +20,7 @@ export default function FloatingButtons() {
               initial={{ opacity: 0, x: 20, scale: 0.9 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: 10, scale: 0.9 }}
-              className="mr-4 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 border border-white/20 text-white text-[0.7rem] tracking-[0.2em] uppercase font-bold shadow-2xl pointer-events-none"
+              className="mr-3 hidden rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-white shadow-2xl backdrop-blur-md pointer-events-none sm:block"
               style={{ background: 'rgba(0,0,0,0.4)' }}
             >
               Consult on WhatsApp
@@ -39,7 +39,7 @@ export default function FloatingButtons() {
           whileTap={{ scale: 0.9 }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="w-[56px] h-[56px] rounded-full flex items-center justify-center text-white shadow-[0_15px_35px_rgba(37,211,102,0.3)] relative overflow-hidden"
+          className="h-[52px] w-[52px] rounded-full border border-white/50 flex items-center justify-center text-white shadow-[0_15px_35px_rgba(37,211,102,0.26)] relative overflow-hidden backdrop-blur-xl sm:h-[56px] sm:w-[56px]"
           style={{ background: '#25D366' }}
         >
           {/* Subtle pulse effect */}
@@ -60,7 +60,7 @@ export default function FloatingButtons() {
               initial={{ opacity: 0, x: 20, scale: 0.9 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: 10, scale: 0.9 }}
-              className="mr-4 px-4 py-2 rounded-lg backdrop-blur-md bg-white/10 border border-white/20 text-white text-[0.7rem] tracking-[0.2em] uppercase font-bold shadow-2xl pointer-events-none"
+              className="mr-3 hidden rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-white shadow-2xl backdrop-blur-md pointer-events-none sm:block"
               style={{ background: 'rgba(0,0,0,0.4)' }}
             >
               Speak with us
@@ -78,7 +78,7 @@ export default function FloatingButtons() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="w-[56px] h-[56px] rounded-full flex items-center justify-center shadow-[0_15px_35px_rgba(176,141,87,0.3)] border border-white/20 relative overflow-hidden"
+          className="h-[52px] w-[52px] rounded-full flex items-center justify-center shadow-[0_15px_35px_rgba(176,141,87,0.25)] border border-white/40 relative overflow-hidden backdrop-blur-xl sm:h-[56px] sm:w-[56px]"
           style={{ background: T.gold, color: T.white }}
         >
           {/* Subtle gold radiance */}
@@ -94,4 +94,3 @@ export default function FloatingButtons() {
     </div>
   )
 }
-

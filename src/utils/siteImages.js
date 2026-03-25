@@ -1,0 +1,33 @@
+export const siteImages = {
+  hero: '/images/livora/home-hero.png',
+  aboutFeature: '/images/livora/about-story-bedroom.png',
+  aboutStudio: '/images/livora/about-studio-interior.png',
+  faqFeature: '/images/livora/faq-showroom.png',
+  contactMap: '/images/livora/contact-map-cover.png',
+  comparison: {
+    before: '/images/inside.png',
+    after: '/images/livora/home-hero.png',
+  },
+  services: {
+    residential: '/images/livora/service-residential.png',
+    kitchen: '/images/livora/service-kitchen.png',
+    bedroom: '/images/livora/service-bedroom.png',
+    commercial: '/images/livora/service-commercial.png',
+    wardrobe: '/images/livora/service-wardrobe.png',
+    ceiling: '/images/livora/service-ceiling.png',
+    lighting: '/images/livora/service-lighting.jpg',
+  },
+  portfolio: {
+    meridian: '/images/livora/portfolio-meridian.png',
+    casaVerde: '/images/livora/portfolio-casa-verde.png',
+    masterRetreat: '/images/livora/portfolio-master-retreat.png',
+    vertexOffice: '/images/livora/portfolio-vertex-office.png',
+    villaAranya: '/images/livora/portfolio-villa-aranya.png',
+    walkInWardrobe: '/images/livora/portfolio-walkin-wardrobe.png',
+    luxuryIslandKitchen: '/images/livora/portfolio-luxury-island-kitchen.png',
+    emeraldResidence: '/images/livora/portfolio-emerald-residence.png',
+    modernStudio: '/images/livora/portfolio-modern-studio.png',
+    classicHeritage: '/images/livora/portfolio-classic-heritage.png',
+    contemporaryOffice: '/images/livora/portfolio-contemporary-office.png',
+  },
+}

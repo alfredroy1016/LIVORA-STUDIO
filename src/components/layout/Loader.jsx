@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { T } from '../../theme'
 
 export default function Loader({ onDone }) {
   useEffect(() => {
@@ -11,16 +12,16 @@ export default function Loader({ onDone }) {
       id="loader"
       style={{
         position: 'fixed', inset: 0, zIndex: 9999,
-        background: '#0B1020',
+        background: T.bgLoader,
         display: 'flex', alignItems: 'center', justifyContent: 'center',
       }}
     >
       <div style={{ textAlign: 'center' }}>
         <div style={{
-          fontFamily: "'Playfair Display', serif",
+          fontFamily: T.fontDisplay,
           fontSize: '2.6rem',
           letterSpacing: '.18em',
-          color: '#B08D57',
+          color: T.gold,
           animation: 'loader-pulse 1.6s ease-in-out infinite',
         }}>
           LIVORA
@@ -28,7 +29,7 @@ export default function Loader({ onDone }) {
         <div style={{
           width: 0,
           height: '1px',
-          background: '#B08D57',
+          background: T.gold,
           margin: '.9rem auto 0',
           animation: 'loader-expand 1.8s ease forwards',
         }} />

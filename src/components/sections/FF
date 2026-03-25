@@ -1,0 +1,152 @@
+ <div className="w-full max-w-[360px] rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.18),rgba(255,255,255,0.05))] p-7 text-left shadow-[0_35px_90px_rgba(0,0,0,0.28)] backdrop-blur-xl">
+            <span className="text-[0.68rem] font-semibold uppercase tracking-[0.4em] text-[#d9bf91]">
+              Signature Promise
+            </span>
+            <h3 className="mt-5 font-['Playfair_Display'] text-[2rem] leading-tight text-white">
+              Timeless luxury with disciplined delivery.
+            </h3>
+            <div className="mt-8 space-y-5 border-t border-white/10 pt-7">
+              <div className="flex items-end justify-between gap-4">
+                <span className="text-[0.74rem] uppercase tracking-[0.28em] text-white/56">
+                  Experience
+                </span>
+                <strong className="font-['Playfair_Display'] text-[2.4rem] text-white">10+</strong>
+              </div>
+              <div className="flex items-end justify-between gap-4">
+                <span className="text-[0.74rem] uppercase tracking-[0.28em] text-white/56">
+                  Warranty
+                </span>
+                <strong className="font-['Playfair_Display'] text-[2.4rem] text-[#d9bf91]">10Y</strong>
+              </div>
+              <div className="flex items-end justify-between gap-4">
+                <span className="text-[0.74rem] uppercase tracking-[0.28em] text-white/56">
+                  Follow-up Support
+                </span>
+                <strong className="font-['Playfair_Display'] text-[2.4rem] text-white">2Y</strong>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   PROJECT_SUMMARY.md
+        modified:   README.md
+        modified:   index.html
+        renamed:    public/LIVORA.png -> public/images/LIVORA.png
+        renamed:    public/bedroom.png -> public/images/bedroom.png
+        renamed:    public/hero.png -> public/images/hero.png
+        new file:   public/images/inside.png
+        new file:   public/images/inside1.jpg
+        renamed:    public/kitchen.png -> public/images/kitchen.png
+        new file:   public/images/livora/README.txt
+        new file:   public/images/livora/about-story-bedroom.png
+        new file:   public/images/livora/about-studio-interior.png
+        renamed:    public/office.png -> public/images/livora/contact-map-cover.png
+        new file:   public/images/livora/faq-showroom.png
+        new file:   public/images/livora/home-hero.png
+        new file:   public/images/livora/portfolio-casa-verde.png
+        new file:   public/images/livora/portfolio-classic-heritage.png
+        new file:   public/images/livora/portfolio-contemporary-office.png
+        new file:   public/images/livora/portfolio-emerald-residence.png
+        new file:   public/images/livora/portfolio-luxury-island-kitchen.png
+        new file:   public/images/livora/portfolio-master-retreat.png
+        new file:   public/images/livora/portfolio-meridian.png
+        new file:   public/images/livora/portfolio-modern-studio.png
+        new file:   public/images/livora/portfolio-vertex-office.png
+        new file:   public/images/livora/portfolio-villa-aranya.png
+        renamed:    public/wardrobe.png -> public/images/livora/portfolio-walkin-wardrobe.png
+        new file:   public/images/livora/service-bedroom.png
+        new file:   public/images/livora/service-ceiling.png
+        new file:   public/images/livora/service-commercial.png
+        new file:   public/images/livora/service-kitchen.png
+        new file:   public/images/livora/service-lighting.jpg
+        new file:   public/images/livora/service-residential.png
+        new file:   public/images/livora/service-wardrobe.png
+        new file:   public/images/office.png
+        new file:   public/images/officeinside.png
+        new file:   public/images/wardrobe.png
+        modified:   src/App.jsx
+        deleted:    src/components/About.jsx
+        deleted:    src/components/BrandStrip.jsx
+        deleted:    src/components/Contact.jsx
+        deleted:    src/components/Footer.jsx
+        deleted:    src/components/Hero.jsx
+        deleted:    src/components/Logo.jsx
+        deleted:    src/components/Navbar.jsx
+        deleted:    src/components/Philosophy.jsx
+        deleted:    src/components/Services.jsx
+        deleted:    src/components/Testimonials.jsx
+        deleted:    src/components/WhyUs.jsx
+        renamed:    src/components/FloatingButtons.jsx -> src/components/layout/FloatingButtons.jsx
+        new file:   src/components/layout/Footer.jsx
+        renamed:    src/components/Loader.jsx -> src/components/layout/Loader.jsx
+        new file:   src/components/layout/Navbar.jsx
+        new file:   src/components/sections/About.jsx
+        new file:   src/components/sections/BrandStrip.jsx
+        new file:   src/components/sections/Contact.jsx
+        renamed:    src/components/FAQ.jsx -> src/components/sections/FAQ.jsx
+        new file:   src/components/sections/Hero.jsx
+        new file:   src/components/sections/Philosophy.jsx
+        renamed:    src/components/Portfolio.jsx -> src/components/sections/Portfolio.jsx
+        new file:   src/components/sections/Services.jsx
+        new file:   src/components/sections/Testimonials.jsx
+        new file:   src/components/sections/WhyUs.jsx
+        new file:   src/components/ui/Logo.jsx
+        modified:   src/data/portfolio.js
+        modified:   src/index.css
+        new file:   src/layouts/MainLayout.jsx
+        modified:   src/main.jsx
+        new file:   src/pages/AboutPage.jsx
+        new file:   src/pages/ContactPage.jsx
+        modified:   src/pages/Home.jsx
+        new file:   src/pages/NotFound.jsx
+        new file:   src/pages/PortfolioPage.jsx
+        new file:   src/pages/ServicesPage.jsx
+        new file:   src/routes/AppRoutes.jsx
+        new file:   src/utils/helpers.js
+        new file:   src/utils/siteImages.js
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+        modified:   package-lock.json
+        modified:   package.json
+        modified:   src/components/layout/Footer.jsx
+        modified:   src/components/layout/Navbar.jsx
+        modified:   src/components/sections/About.jsx
+        modified:   src/components/sections/BrandStrip.jsx
+        modified:   src/components/sections/Contact.jsx
+        modified:   src/components/sections/FAQ.jsx
+        modified:   src/components/sections/Hero.jsx
+        modified:   src/components/sections/Portfolio.jsx
+        modified:   src/components/sections/Testimonials.jsx
+        modified:   src/components/sections/WhyUs.jsx
+        modified:   src/components/ui/Logo.jsx
+        modified:   src/data/faqs.js
+        modified:   src/data/portfolio.js
+        modified:   src/data/testimonials.js
+        modified:   src/index.css
+        modified:   src/pages/AboutPage.jsx
+        modified:   src/pages/ContactPage.jsx
+        modified:   src/pages/ServicesPage.jsx
+        modified:   src/theme.js
+        modified:   src/utils/siteImages.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        public/images/LOGOBLACK.png
+        public/images/LOGOWHITE.PNG
+        public/videos/
+        src/components/sections/FF
+
+PS C:\Users\PRO\Desktop\LIVORA INTERIOR STUDIO> 
