@@ -183,30 +183,44 @@ export default function Contact() {
               </label>
             </div>
 
-            <div className="mt-8 flex flex-col items-center gap-4 pt-2 md:mt-10">
-              <button
-                type="submit"
-                disabled={loading}
-                className="group inline-flex min-h-[54px] w-full items-center justify-center gap-3 border-none bg-transparent px-2 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.34em] text-[#f8f3ea] transition duration-300 sm:w-auto"
-                style={{ color: '#f8f3ea' }}
-              >
-                <span className="border-b border-[#e4d2b2] pb-2 text-[#f8f3ea]">
-                  {loading ? 'Opening WhatsApp...' : 'Request Consultation'}
-                </span>
-                <FiArrowRight className="text-[#f8f3ea]" size={16} />
-              </button>
+           <div className="mt-8 flex flex-col items-center gap-5 pt-2 md:mt-10">
 
-              {status === 'success' && (
-                <p className="text-center text-sm text-[#7f6338]">
-                  WhatsApp opened with your prefilled consultation message.
-                </p>
-              )}
-              {status === 'error' && (
-                <p className="text-center text-sm text-[#9b5b47]">
-                  Please fill all fields before continuing to WhatsApp.
-                </p>
-              )}
-            </div>
+  {/* CTA BUTTON */}
+  <button
+  type="submit"
+  disabled={loading}
+  className="group relative inline-flex min-h-[54px] w-full items-center justify-center gap-3 px-5 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.34em] transition-all duration-300 sm:w-auto rounded-full"
+  style={{
+    background: '#C6A87D',   // GOLD BACKGROUND
+    color: '#ffffff',marginTop:30
+  }}
+>
+    {/* TEXT */}
+    <span className="relative pb-1 text-white">
+  {loading ? 'Preparing your consultation...' : 'Request Consultation'}
+</span>
+
+    {/* ICON */}
+   <FiArrowRight className="text-white transition-all duration-300 group-hover:translate-x-1" size={16} />
+
+    {/* HOVER LIGHT EFFECT */}
+    <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-gradient-to-r from-transparent via-[#c6a87d33] to-transparent blur-md pointer-events-none" />
+  </button>
+
+  {/* SUCCESS MESSAGE */}
+  {status === 'success' && (
+    <p className="text-center text-[13px] text-[#7f6338] opacity-0 animate-[fadeUp_.6s_forwards]">
+      WhatsApp opened with your consultation details.
+    </p>
+  )}
+
+  {/* ERROR MESSAGE */}
+  {status === 'error' && (
+    <p className="text-center text-[13px] text-[#9b5b47] opacity-0 animate-[fadeUp_.6s_forwards]">
+      Please complete all required fields before proceeding.
+    </p>
+  )}
+</div>
           </form>
         </div>
       </div>

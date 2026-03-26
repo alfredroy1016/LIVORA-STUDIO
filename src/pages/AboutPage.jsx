@@ -35,8 +35,8 @@ export default function AboutPage() {
             transition={{ delay: 0.5, duration: 1 }}
           >
             <span className="mb-5 block text-[0.62rem] font-bold uppercase tracking-[0.42em] text-[#f3eadb]/78 sm:text-[0.7rem] sm:tracking-[0.6em]">Our Legacy</span>
-            <h1 className="font-serif text-[2.55rem] leading-[1.03] text-[rgba(255,250,243,0.84)] sm:text-[4rem] md:text-[6rem]">
-              Crafting <em className="italic text-[rgba(224,194,141,0.92)]">Eternal</em> <br />Narratives
+            <h1 className="font-serif text-[2.55rem] leading-[1.03] text-[rgba(224,194,141,0.92)] sm:text-[4rem] md:text-[6rem]">
+             <em className="italic text-[rgba(224,194,141,0.92)]"> Crafting</em> <em className="italic text-[rgba(0, 0, 0, 0.92)]">Eternal</em> <br /><em className="italic text-[rgba(224,194,141,0.92)]"> Narratives</em> 
             </h1>
           </motion.div>
         </div>

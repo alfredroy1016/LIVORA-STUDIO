@@ -111,22 +111,36 @@ export default function Navbar() {
             {NAVIGATION.map((item) => (
               <li key={item.label}>
                 <button
-                  onClick={() => handleNavClick(item)}
-                  className="relative group bg-transparent border-none cursor-pointer p-0"
-                  style={{
-                    color: T.dark,
-                    fontSize: '.72rem',
-                    letterSpacing: '.2em',
-                    textTransform: 'uppercase',
-                    fontFamily: "'Inter', sans-serif",
-                    fontWeight: 600,
-                    opacity: 0.8,
-                    transition: 'all .3s',
-                  }}
-                >
-                  <span className="group-hover:text-gold transition-colors">{item.label}</span>
-                  <span className={`absolute -bottom-2 left-0 h-[1.5px] bg-gold transition-all duration-300 ${location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'}`} />
-                </button>
+  onClick={() => handleNavClick(item)}
+  className="relative group bg-transparent border-none cursor-pointer p-0"
+  style={{
+    color: T.dark,
+    fontSize: '.72rem',
+    letterSpacing: '.22em',
+    textTransform: 'uppercase',
+    fontFamily: "'Inter', sans-serif",
+    fontWeight: 600,
+    opacity: 0.85,
+    transition: 'all .3s ease',
+  }}
+>
+  {/* TEXT */}
+  <span className="relative inline-block transition-all duration-300 group-hover:text-gold group-hover:-translate-y-[1px]">
+    {item.label}
+  </span>
+
+  {/* UNDERLINE */}
+  <span
+    className={`
+      absolute left-0 -bottom-2 h-[1.5px] bg-gold
+      transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
+      ${location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'}
+    `}
+  />
+
+  {/* SUBTLE GLOW (NEW) */}
+  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 blur-[6px] bg-gold/10 pointer-events-none" />
+</button>
               </li>
             ))}
           </ul>
@@ -171,8 +185,13 @@ export default function Navbar() {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-[1000] flex flex-col justify-between overflow-y-auto bg-white px-6 pb-8 pt-28 sm:px-8 sm:pb-10 sm:pt-32 md:p-12 md:pt-32"
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+           className="fixed inset-0 z-[1000] flex flex-col justify-between overflow-y-auto px-6 pb-8 pt-28 sm:px-8 sm:pb-10 sm:pt-32 md:p-12 md:pt-32"
+style={{
+  background: 'rgba(255,255,255,0.85)',
+  backdropFilter: 'blur(24px)',
+}}
+           
           >
             <div className="flex flex-col gap-5 sm:gap-6 md:gap-8">
               {NAVIGATION.map((item, idx) => (
@@ -182,8 +201,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 + idx * 0.05 }}
                   onClick={() => handleNavClick(item)}
-                  className="border-none bg-transparent text-left font-serif text-[2rem] font-medium text-dark transition-colors hover:text-gold sm:text-[2.35rem] md:text-[2.8rem]"
-                >
+                  className="border-none bg-transparent text-left font-serif text-[2.4rem] font-medium tracking-tight text-dark transition-all duration-300 hover:text-gold sm:text-[2.8rem] md:text-[3.2rem]"                >
                   {item.label}
                 </motion.button>
               ))}
