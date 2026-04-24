@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import Loader          from './components/layout/Loader'
 import MainLayout      from './layouts/MainLayout'
 import AppRoutes       from './routes/AppRoutes'
@@ -32,6 +32,5 @@ export default function App() {
     </Router>
   )
 }
-
 
 

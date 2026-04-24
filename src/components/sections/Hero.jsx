@@ -42,7 +42,7 @@ export default function Hero() {
             className="mb-6 text-[0.66rem] font-semibold uppercase tracking-[0.28em] sm:mb-8 sm:text-[0.72rem] sm:tracking-[0.45em]"
             style={{ color: T.goldSoft }}
           >
-            Livora Interior Studio | Wayanad, Kerala
+            Livora Interior Studio |Sulthan Bathery Wayanad, Kerala
           </motion.p>
 
           <motion.h1

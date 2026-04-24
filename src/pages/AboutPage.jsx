@@ -52,10 +52,10 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="text-center lg:text-left"
               >
-                <h2 className="mb-8 font-serif text-[2rem] leading-tight md:text-[3.5rem] lg:text-left">
+                <h2 className="mb-8 font-serif text-[2rem] leading-tight text-[#241f1a] md:text-[3.5rem] lg:text-left">
                   Born from a Passion for <span className="italic text-gold">Spatial Harmony</span>
                 </h2>
-                <div className="space-y-8 text-[1.1rem] font-light leading-relaxed text-[#6a6259]">
+                <div className="space-y-8 text-[1.1rem] font-light leading-relaxed text-[#746c63]">
                   <p className="lg:mx-0 lg:text-left">
                     Livora Interior Studio was founded on a singular premise: that the spaces we inhabit have the power to profoundly influence the way we live, think, and feel. We do not just design rooms; we curate environments that catalyze inspiration.
                   </p>
@@ -73,9 +73,10 @@ export default function AboutPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="relative rounded-2xl overflow-hidden shadow-2xl"
+                className="relative overflow-hidden rounded-[28px] border border-gold/10 shadow-[0_28px_80px_rgba(30,26,23,0.10)]"
               >
                 <img src={siteImages.aboutStudio} alt="Our Studio Interior" className="w-full aspect-[4/5] object-cover" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/5" />
                 <div className="absolute bottom-4 left-4 max-w-[220px] rounded-[20px] bg-white/90 p-5 shadow-lg backdrop-blur sm:bottom-8 sm:left-8 sm:max-w-[300px] sm:rounded-xl sm:p-8">
                   <p className="text-gold font-serif text-[2rem] leading-none mb-2">10+</p>
                   <p className="text-[0.6rem] uppercase tracking-[0.2em] font-bold text-dark">Years of Pioneering Design Excellence</p>

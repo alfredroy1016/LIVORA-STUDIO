@@ -14,7 +14,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="relative z-10 rounded-2xl overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.1)]"
+              className="relative z-10 overflow-hidden rounded-[28px] border border-gold/10 shadow-[0_28px_80px_rgba(30,26,23,0.10)]"
             >
               <video
                 className="w-full aspect-[4/5] object-cover"
@@ -28,7 +28,7 @@ export default function About() {
               >
                 <source src="/videos/HOME.mp4" type="video/mp4" />
               </video>
-              <div className="absolute inset-0 bg-gold/5 pointer-events-none" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/6" />
             </motion.div>
 
             <motion.div
@@ -47,18 +47,18 @@ export default function About() {
             <div className="absolute -top-10 -left-10 w-40 h-40 border-l border-t border-gold/30 pointer-events-none" aria-hidden="true" />
           </div>
 
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="mb-10"
             >
-              <span className="mb-6 block text-[0.7rem] font-bold uppercase tracking-[0.5em] text-[#b08d57]">Our Story</span>
-              <h2 className="mb-8 font-serif text-[2.8rem] leading-[1.1] text-[#1e1a17] md:text-[3.8rem] lg:text-[4.5rem]">
+              <span className="mb-6 block text-[0.7rem] font-bold uppercase tracking-[0.5em] text-gold">Our Story</span>
+              <h2 className="mb-8 font-serif text-[2.8rem] leading-[1.1] text-[#241f1a] md:text-[3.8rem] lg:text-[4.5rem]">
                 Design That <em className="italic text-gold">Elevates</em> Daily Life
               </h2>
-              <div className="w-20 h-[2px] bg-gold" />
+              <div className="h-[2px] w-20 bg-gold lg:mx-0" />
             </motion.div>
 
             <motion.div
@@ -68,7 +68,7 @@ export default function About() {
               transition={{ delay: 0.2 }}
               className="space-y-8 max-w-lg"
             >
-              <p className="text-[1.1rem] font-light italic leading-relaxed text-[#5f564d] md:text-[1.2rem]">
+              <p className="text-[1.1rem] font-light italic leading-relaxed text-[#6a6259] md:text-[1.2rem]">
                 "LIVORA Interior Studio creates refined environments that blend comfort, aesthetics, and intelligent design. Every project reflects individuality through premium finishing."
               </p>
               <p className="text-[1rem] font-light leading-relaxed text-[#746c63]">
@@ -76,7 +76,7 @@ export default function About() {
               </p>
 
               <div className="pt-6 border-t border-gold/10">
-                <p className="mb-6 text-[0.95rem] font-medium leading-relaxed text-[#1e1a17]">
+                <p className="mb-6 text-[0.95rem] font-medium leading-relaxed text-[#241f1a]">
                   "10 years of design excellence, warranty-backed craftsmanship, and long-term customer care."
                 </p>
                 <ul className="space-y-4">
@@ -84,9 +84,9 @@ export default function About() {
                     'Custom Design Consultation',
                     'Execution + Material Control',
                   ].map((item, idx) => (
-                    <li key={idx} className="group flex items-center justify-center gap-4">
+                    <li key={idx} className="group flex items-center justify-center gap-4 lg:justify-start">
                       <div className="w-8 h-[1px] bg-gold" />
-                      <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#8a7d6d] transition-colors group-hover:text-gold">{item}</span>
+                      <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[#746c63] transition-colors group-hover:text-gold">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -102,18 +102,18 @@ export default function About() {
             >
               <Link
                 to="/about"
-                className="group relative inline-flex items-center gap-4 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#1e1a17] no-underline transition-colors hover:text-gold"
+                className="group relative inline-flex items-center gap-4 text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#241f1a] no-underline transition-colors hover:text-gold"
               >
                 <span>Read Full Odyssey</span>
-                <span className="h-[1px] w-10 bg-[#1e1a17] transition-all duration-300 group-hover:w-16 group-hover:bg-gold" />
+                <span className="h-[1px] w-10 bg-[#241f1a] transition-all duration-300 group-hover:w-16 group-hover:bg-gold" />
               </Link>
 
               <button
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="group relative inline-flex items-center gap-4 border-none bg-transparent text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#1e1a17] no-underline transition-colors hover:text-gold cursor-pointer"
+                className="group relative inline-flex items-center gap-4 border-none bg-transparent text-[0.72rem] font-bold uppercase tracking-[0.28em] text-[#241f1a] no-underline transition-colors hover:text-gold cursor-pointer"
               >
                 <span>Discover Capabilities</span>
-                <span className="h-[1px] w-10 bg-[#1e1a17] transition-all duration-300 group-hover:w-16 group-hover:bg-gold" />
+                <span className="h-[1px] w-10 bg-[#241f1a] transition-all duration-300 group-hover:w-16 group-hover:bg-gold" />
               </button>
             </motion.div>
           </div>
