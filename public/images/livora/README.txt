@@ -1,3 +1,4 @@
+
 Replace the placeholder files in this folder with real LIVORA project photography.
 
 Keep the same filenames so the website updates without any code changes.
@@ -21,3 +22,6 @@ Recommended:
 - Hero and portfolio images: landscape, high quality
 - About and feature images: portrait or 4:5 crop
 - Compress large images before production deployment
+  
+
+  
