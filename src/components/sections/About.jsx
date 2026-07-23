@@ -37,7 +37,7 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ delay: 0.5, type: 'spring', stiffness: 100 }}
               whileHover={{ y: -10, rotate: 5 }}
-              className="absolute -bottom-10 -right-4 md:-right-12 z-20 p-8 md:p-12 text-center backdrop-blur-xl bg-white/90 shadow-2xl border border-gold/20 flex flex-col items-center justify-center min-w-[180px]"
+              className="livora-aesthetic-card absolute -bottom-10 -right-4 md:-right-12 z-20 flex min-w-[180px] flex-col items-center justify-center border border-gold/20 bg-white/90 p-8 text-center shadow-2xl backdrop-blur-xl md:p-12"
             >
               <span className="font-serif text-[3.5rem] md:text-[4.5rem] leading-none text-dark font-bold mb-2">10<span className="text-gold">+</span></span>
               <span className="text-[0.6rem] md:text-[0.7rem] tracking-[0.3em] font-bold uppercase text-gold">Years Of Excellence</span>

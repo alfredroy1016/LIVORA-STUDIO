@@ -14,7 +14,7 @@ function BeforeAfterShowcase() {
   const [slider, setSlider] = useState(58)
 
   return (
-    <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#14110e] p-5 shadow-[0_25px_80px_rgba(0,0,0,0.22)] md:p-7">
+    <div className="livora-dark-card relative overflow-hidden rounded-[32px] border border-white/10 bg-[#14110e] p-5 shadow-[0_25px_80px_rgba(0,0,0,0.22)] md:p-7">
       <div className="mb-5 flex items-center justify-between gap-4">
         <div>
           <span className="text-[0.65rem] font-bold uppercase tracking-[0.4em] text-[#d9bf91]">
@@ -102,61 +102,8 @@ export default function Portfolio() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+        <div className="mx-auto max-w-[960px]">
           <BeforeAfterShowcase />
-
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {FEATURED_PROJECTS.map((project, index) => (
-              <motion.article
-                key={project.title}
-                initial={{ opacity: 0, y: 26 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08, duration: 0.7 }}
-                className={`group relative overflow-hidden rounded-[30px] border border-white/10 ${
-                  project.tall ? 'md:row-span-2' : ''
-                }`}
-              >
-                <div className={`relative ${project.tall ? 'h-[520px] md:h-full md:min-h-[560px]' : 'h-[260px] md:h-[280px]'}`}>
-                  <img
-                    src={project.img}
-                    alt={project.title}
-                    className="h-full w-full object-cover transition duration-[1600ms] group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/22 to-transparent" />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.78))] opacity-75 transition duration-500 group-hover:opacity-100" />
-
-                  <div className="absolute inset-x-0 bottom-0 p-7 text-left">
-                    <div className="mb-4 flex items-center justify-between gap-4">
-                      <span className="rounded-full border border-white/10 bg-white/10 px-3 py-2 text-[0.62rem] font-bold uppercase tracking-[0.3em] text-white/78 backdrop-blur-md">
-                        {project.year}
-                      </span>
-                      <span className="text-[0.64rem] uppercase tracking-[0.34em] text-[#d9bf91]">
-                        {project.sub}
-                      </span>
-                    </div>
-                    <h3 className="font-['Playfair_Display'] text-[1.75rem] leading-tight text-white">
-                      {project.title}
-                    </h3>
-                    <p className="mt-4 max-w-none text-left text-sm leading-7 text-white/72 opacity-0 transition duration-500 group-hover:opacity-100">
-                      A composition of premium surfaces, measured lighting, and bespoke detailing designed
-                      to elevate daily living without compromising utility.
-                    </p>
-                  </div>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-16 text-center">
-          <Link
-            to="/portfolio"
-            className="inline-flex items-center gap-3 rounded-full border border-[#d9bf91]/40 bg-white/5 px-8 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-white no-underline backdrop-blur-md transition duration-500 hover:-translate-y-1 hover:border-[#d9bf91] hover:bg-[#d9bf91] hover:text-[#14110e]"
-          >
-            View All Projects
-            <FiArrowRight size={16} />
-          </Link>
         </div>
       </div>
     </section>

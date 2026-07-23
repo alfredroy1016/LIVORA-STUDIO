@@ -3,6 +3,8 @@ import { FiInstagram, FiFacebook, FiLinkedin, FiArrowUpRight } from 'react-icons
 import Logo from '../ui/Logo'
 
 const WA = 'https://wa.me/918921179724'
+const INSTAGRAM = 'https://www.instagram.com/livora_interior_studio/'
+const FACEBOOK = 'https://www.facebook.com/profile.php?id=61588486752994&sk=photos'
 const EMAIL = 'info@livorainteriorstudio.com'
 const PHONE = '+91 89211 79724'
 
@@ -21,8 +23,8 @@ const EXPERIENCE_LINKS = [
 ]
 
 const SOCIAL_LINKS = [
-  { label: 'Instagram', href: WA, icon: FiInstagram },
-  { label: 'Facebook', href: WA, icon: FiFacebook },
+  { label: 'Instagram', href: INSTAGRAM, icon: FiInstagram },
+  { label: 'Facebook', href: FACEBOOK, icon: FiFacebook },
   { label: 'LinkedIn', href: `mailto:${EMAIL}`, icon: FiLinkedin },
 ]
 
@@ -50,7 +52,7 @@ export default function Footer() {
       <div className="container max-w-7xl px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-12 mb-24">
           <div className="flex flex-col items-start lg:col-span-1">
-            <Logo size={32} showText={true} variant="black" className="mb-8" />
+            <Logo size={52} className="mb-8" />
             <p className="text-[0.95rem] leading-relaxed text-white/40 font-light mb-10 max-w-[300px]">
               Crafting refined interior experiences that blend international aesthetics with artisanal precision.
             </p>

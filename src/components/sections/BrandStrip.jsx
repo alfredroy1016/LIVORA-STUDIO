@@ -66,7 +66,8 @@ export default function BrandStrip() {
                   duration: 0.8,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="group relative flex flex-col items-center text-center rounded-[26px] bg-[#f8f5ef] px-6 py-10 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)]"
+                whileHover={{ y: -8 }}
+                className="group livora-aesthetic-card livora-metric-card relative flex flex-col items-center rounded-[26px] bg-[#f8f5ef] px-6 py-10 text-center transition-all duration-500 ease-out"
               >
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#efe7d8]">
                   <Icon size={18} color="#b08d57" />

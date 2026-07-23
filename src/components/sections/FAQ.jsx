@@ -14,7 +14,7 @@ export default function FAQ() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="faq-premium-card"
+          className="faq-premium-card livora-aesthetic-card livora-static-card"
         >
           <div className="faq-left">
             <div className="mb-10">

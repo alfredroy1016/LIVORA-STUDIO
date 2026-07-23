@@ -5,7 +5,6 @@ import Services     from '../components/sections/Services'
 import Portfolio    from '../components/sections/Portfolio'
 import WhyUs        from '../components/sections/WhyUs'
 import Philosophy   from '../components/sections/Philosophy'
-import Testimonials from '../components/sections/Testimonials'
 import FAQ          from '../components/sections/FAQ'
 import Contact      from '../components/sections/Contact'
 
@@ -19,7 +18,6 @@ export default function Home() {
       <Portfolio />
       <WhyUs />
       <Philosophy />
-      <Testimonials />
       <FAQ />
       <Contact />
     </>

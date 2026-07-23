@@ -187,23 +187,24 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="group inline-flex min-h-[54px] w-full items-center justify-center gap-3 border-none bg-transparent px-2 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.34em] text-[#f8f3ea] transition duration-300 sm:w-auto"
-                style={{ color: '#f8f3ea' }}
+                className="group relative inline-flex min-h-[58px] w-full items-center justify-center overflow-hidden rounded-full border border-[#e2c496]/60 px-9 py-4 text-center text-[0.72rem] font-bold uppercase tracking-[0.26em] text-white no-underline shadow-[0_16px_40px_rgba(176,141,87,0.3)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(176,141,87,0.48)] disabled:opacity-70 sm:w-auto"
+                style={{ background: 'linear-gradient(135deg, #c59b62 0%, #b08d57 50%, #9e753b 100%)' }}
               >
-                <span className="border-b border-[#e4d2b2] pb-2 text-[#f8f3ea]">
+                <span className="absolute -left-[100%] top-0 h-full w-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-all duration-1000 group-hover:left-[100%]" />
+                <span className="relative z-10 flex items-center justify-center gap-3">
                   {loading ? 'Opening WhatsApp...' : 'Request Consultation'}
+                  <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1.5" size={17} />
                 </span>
-                <FiArrowRight className="text-[#f8f3ea]" size={16} />
               </button>
 
               {status === 'success' && (
-                <p className="text-center text-sm text-[#7f6338]">
-                  WhatsApp opened with your prefilled consultation message.
+                <p className="text-center text-sm font-medium text-[#7f6338]">
+                  ✓ WhatsApp opened with your prefilled consultation message.
                 </p>
               )}
               {status === 'error' && (
-                <p className="text-center text-sm text-[#9b5b47]">
-                  Please fill all fields before continuing to WhatsApp.
+                <p className="text-center text-sm font-medium text-[#9b5b47]">
+                  ⚠ Please fill all fields before continuing to WhatsApp.
                 </p>
               )}
             </div>

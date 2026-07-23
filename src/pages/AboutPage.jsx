@@ -76,7 +76,7 @@ export default function AboutPage() {
                 className="relative rounded-2xl overflow-hidden shadow-2xl"
               >
                 <img src={siteImages.aboutStudio} alt="Our Studio Interior" className="w-full aspect-[4/5] object-cover" />
-                <div className="absolute bottom-4 left-4 max-w-[220px] rounded-[20px] bg-white/90 p-5 shadow-lg backdrop-blur sm:bottom-8 sm:left-8 sm:max-w-[300px] sm:rounded-xl sm:p-8">
+                <div className="livora-aesthetic-card absolute bottom-4 left-4 max-w-[220px] rounded-[20px] bg-white/90 p-5 shadow-lg backdrop-blur sm:bottom-8 sm:left-8 sm:max-w-[300px] sm:rounded-xl sm:p-8">
                   <p className="text-gold font-serif text-[2rem] leading-none mb-2">10+</p>
                   <p className="text-[0.6rem] uppercase tracking-[0.2em] font-bold text-dark">Years of Pioneering Design Excellence</p>
                 </div>
@@ -104,7 +104,8 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="rounded-[26px] border border-gold/10 bg-white/90 p-7 shadow-[0_18px_50px_rgba(30,26,23,0.05)] backdrop-blur transition-all md:rounded-2xl md:p-12"
+              whileHover={{ y: -8 }}
+              className="livora-aesthetic-card rounded-[26px] border border-gold/10 bg-white/90 p-7 shadow-[0_18px_50px_rgba(30,26,23,0.05)] backdrop-blur transition-all md:rounded-2xl md:p-12"
             >
               <h3 className="font-serif text-[1.5rem] mb-6 text-gold">{value.title}</h3>
               <p className="font-light leading-relaxed text-[#746c63]">{value.desc}</p>

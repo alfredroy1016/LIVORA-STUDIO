@@ -37,7 +37,7 @@ export default function PortfolioPage() {
               </h1>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-3 rounded-[26px] border border-[rgba(176,141,87,0.14)] bg-white/90 p-3 shadow-[0_18px_50px_rgba(30,26,23,0.05)] backdrop-blur md:gap-8 lg:justify-end">
+            <div className="livora-aesthetic-card livora-static-card flex flex-wrap justify-center gap-3 rounded-[26px] border border-[rgba(176,141,87,0.14)] bg-white/90 p-3 shadow-[0_18px_50px_rgba(30,26,23,0.05)] backdrop-blur md:gap-8 lg:justify-end">
               {FILTERS.map((value) => (
                 <button
                   key={value}
@@ -62,7 +62,8 @@ export default function PortfolioPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
-                className="group cursor-pointer rounded-[28px] border border-[rgba(176,141,87,0.1)] bg-white/88 p-3 shadow-[0_20px_50px_rgba(30,26,23,0.05)] backdrop-blur"
+                whileHover={{ y: -8 }}
+                className="group livora-aesthetic-card cursor-pointer rounded-[28px] border border-[rgba(176,141,87,0.1)] bg-white/88 p-3 shadow-[0_20px_50px_rgba(30,26,23,0.05)] backdrop-blur"
               >
                 <div
                   className="relative mb-5 aspect-[3/4] overflow-hidden rounded-[22px] bg-[#f6f1e8]"

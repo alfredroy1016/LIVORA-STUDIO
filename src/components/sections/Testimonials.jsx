@@ -62,7 +62,8 @@ export default function Testimonials() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.06, duration: 0.7 }}
-                  className={`h-full rounded-[30px] border bg-white/92 p-6 text-center shadow-[0_25px_70px_rgba(20,17,14,0.07)] backdrop-blur transition duration-500 md:p-10 ${
+                  whileHover={{ y: -8 }}
+                  className={`livora-aesthetic-card h-full rounded-[30px] border bg-white/92 p-6 text-center shadow-[0_25px_70px_rgba(20,17,14,0.07)] backdrop-blur transition duration-500 md:p-10 ${
                     isActive ? 'border-[rgba(176,141,87,0.28)]' : 'border-[rgba(176,141,87,0.12)]'
                   }`}
                 >

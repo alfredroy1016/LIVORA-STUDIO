@@ -89,7 +89,7 @@ export default function WhyUs() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.08, duration: 0.7 }}
                   whileHover={{ y: -8 }}
-                  className="group rounded-[28px] border border-[rgba(176,141,87,0.18)] bg-white/90 p-6 text-center shadow-[0_18px_55px_rgba(17,17,17,0.05)] backdrop-blur md:p-7"
+                  className="group livora-aesthetic-card rounded-[28px] border border-[rgba(176,141,87,0.18)] bg-white/90 p-6 text-center shadow-[0_18px_55px_rgba(17,17,17,0.05)] backdrop-blur md:p-7"
                 >
                   <div className="mb-6 inline-flex h-[52px] w-[52px] items-center justify-center rounded-2xl bg-[#fcf6ea] p-4">
                     <Icon size={18} color={T.gold} />

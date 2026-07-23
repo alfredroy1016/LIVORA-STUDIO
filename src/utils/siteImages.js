@@ -2,7 +2,7 @@ export const siteImages = {
   hero: '/images/livora/home-hero.png',
   aboutFeature: '/images/livora/about-story-bedroom.png',
   aboutStudio: '/images/livora/about-studio-interior.png',
-  faqFeature: '/images/livora/faq-showroom.png',
+  faqFeature: '/images/livora/faq-showroom.jpg',
   contactMap: '/images/livora/contact-map-cover.png',
   comparison: {
     before: '/images/inside.png',
@@ -15,7 +15,7 @@ export const siteImages = {
     commercial: '/images/livora/service-commercial.png',
     wardrobe: '/images/livora/service-wardrobe.png',
     ceiling: '/images/livora/service-ceiling.png',
-    lighting: '/images/livora/service-lighting.jpg',
+    lighting: '/images/livora/service-lighting.png',
   },
   portfolio: {
     meridian: '/images/livora/portfolio-meridian.png',

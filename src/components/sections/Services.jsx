@@ -5,12 +5,42 @@ import { siteImages } from '../../utils/siteImages'
 
 export default function Services() {
   const mainServices = [
-    { title: 'Bespoke Residential', img: siteImages.services.residential, cat: 'Interiors' },
-    { title: 'Modular Kitchens', img: siteImages.services.kitchen, cat: 'Precision' },
-    { title: 'Serene Bedrooms', img: siteImages.services.bedroom, cat: 'Luxury' },
-    { title: 'Executive Offices', img: siteImages.services.commercial, cat: 'Commercial' },
-    { title: 'Fine Wardrobes', img: siteImages.services.wardrobe, cat: 'Storage' },
-    { title: 'Turnkey Renovation', img: siteImages.services.residential, cat: 'Full Service' },
+    {
+      title: 'Bespoke Residential',
+      cat: 'Interiors',
+      img: siteImages.services.residential,
+      desc: 'Transform your home into a timeless living experience with personalized interiors, elegant layouts, premium materials, and flawless craftsmanship tailored to your lifestyle.'
+    },
+    {
+      title: 'Modular Kitchens',
+      cat: 'Precision',
+      img: siteImages.services.kitchen,
+      desc: 'Smartly designed modular kitchens that blend aesthetics, functionality, and premium finishes to create the perfect cooking and gathering space.'
+    },
+    {
+      title: 'Serene Bedrooms',
+      cat: 'Luxury',
+      img: siteImages.services.bedroom,
+      desc: 'Create a peaceful retreat with sophisticated bedroom interiors featuring custom wardrobes, ambient lighting, luxurious textures, and refined detailing.'
+    },
+    {
+      title: 'Executive Offices',
+      cat: 'Commercial',
+      img: siteImages.services.commercial,
+      desc: 'Professional workspaces designed to inspire productivity through intelligent planning, contemporary aesthetics, ergonomic layouts, and premium finishes.'
+    },
+    {
+      title: 'Fine Wardrobes',
+      cat: 'Storage',
+      img: siteImages.services.wardrobe,
+      desc: 'Custom-built wardrobes that combine elegant design with intelligent storage solutions, delivering beauty, organization, and everyday convenience.'
+    },
+    {
+      title: 'Turnkey Renovation',
+      cat: 'Full Service',
+      img: siteImages.services.residential,
+      desc: 'From concept to completion, we manage every stage of your renovation with precision, quality craftsmanship, and seamless project execution.'
+    }
   ]
 
   return (
@@ -47,7 +77,7 @@ export default function Services() {
           />
         </div>
 
-        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-14">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10 lg:grid-cols-3 lg:gap-10">
           {mainServices.map((service, i) => (
             <motion.div
               key={service.title}
@@ -55,34 +85,36 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group relative flex flex-col rounded-[28px] border border-[rgba(176,141,87,0.1)] bg-white/86 p-3 shadow-[0_18px_50px_rgba(30,26,23,0.04)] backdrop-blur"
+              whileHover={{ y: -8 }}
+              className="group livora-aesthetic-card relative flex h-full flex-col justify-between rounded-[28px] border border-[rgba(176,141,87,0.18)] bg-white/95 p-5 pb-7 sm:p-6 sm:pb-8 shadow-[0_16px_40px_rgba(30,26,23,0.05)] backdrop-blur transition-all duration-500 hover:shadow-[0_24px_60px_rgba(176,141,87,0.16)]"
             >
-              <div className="relative mb-5 aspect-[4/5] overflow-hidden rounded-[22px] shadow-xl transition-all duration-700 group-hover:shadow-[0_40px_80px_rgba(0,0,0,0.12)]">
-                <img
-                  src={service.img}
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/10 transition-colors duration-500 group-hover:bg-black/40" />
+              <div>
+                <div className="relative mb-6 aspect-[4/3] w-full overflow-hidden rounded-[20px] shadow-md transition-all duration-700 group-hover:shadow-xl">
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="h-full w-full object-cover transition-transform duration-[1.8s] ease-out group-hover:scale-108"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-40" />
+                </div>
 
-                <div className="absolute inset-0 flex flex-col justify-end p-10 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                  <div className="w-12 h-[1px] bg-gold mb-4 translate-y-4 transition-transform duration-500 group-hover:translate-y-0" />
-                  <p className="text-white text-[0.8rem] font-light leading-relaxed translate-y-4 transition-transform duration-500 group-hover:translate-y-0">
-                    Masterfully crafted solutions tailored to your unique lifestyle and taste.
+                <div className="flex flex-col items-center text-center px-1">
+                  <span className="mb-2 block text-center text-[0.65rem] font-bold uppercase tracking-[0.32em] text-[#B08D57]">
+                    {service.cat}
+                  </span>
+                  <h3 className="text-center font-serif text-[1.5rem] sm:text-[1.7rem] font-semibold leading-tight text-[#1E1A17] transition-colors duration-300 group-hover:text-[#B08D57]">
+                    {service.title}
+                  </h3>
+                  <p className="mt-3 text-center text-[0.9rem] font-light leading-relaxed text-[#6F675F]">
+                    {service.desc}
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-col items-start px-2 pb-2">
-                <span className="text-[0.6rem] tracking-[0.4em] uppercase font-bold text-gold mb-3 transition-all duration-300 group-hover:translate-x-2">
-                  {service.cat}
-                </span>
-                <h3 className="font-serif text-[1.55rem] leading-tight text-dark transition-all duration-300 group-hover:text-gold group-hover:translate-x-2 md:text-[1.8rem]">
-                  {service.title}
-                </h3>
+              <div className="mt-6 flex items-center justify-center gap-2 text-center text-[0.7rem] font-bold uppercase tracking-[0.26em] text-[#B08D57] transition-all duration-300 group-hover:translate-x-1">
+                <span>Explore Space</span>
+                <span className="text-base">→</span>
               </div>
-
-              <div className="absolute top-4 right-4 w-8 h-8 border-r border-t border-white/40 opacity-0 transition-all duration-500 group-hover:opacity-100" />
             </motion.div>
           ))}
         </div>

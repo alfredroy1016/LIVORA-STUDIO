@@ -17,15 +17,12 @@ export default function Loader({ onDone }) {
       }}
     >
       <div style={{ textAlign: 'center' }}>
-        <div style={{
-          fontFamily: T.fontDisplay,
-          fontSize: '2.6rem',
-          letterSpacing: '.18em',
-          color: T.gold,
-          animation: 'loader-pulse 1.6s ease-in-out infinite',
-        }}>
-          LIVORA
-        </div>
+        <img
+          src="/images/livora-logo.png"
+          alt="LIVORA Interior Studio"
+          className="h-16 sm:h-20 w-auto object-contain mx-auto transition-transform"
+          style={{ animation: 'loader-pulse 1.6s ease-in-out infinite' }}
+        />
         <div style={{
           width: 0,
           height: '1px',
