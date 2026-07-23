@@ -58,20 +58,21 @@ export default function Navbar() {
   const handleNavClick = (item) => {
     setOpen(false)
 
-    if (location.pathname === '/' || item.path !== '/') {
-      if (location.pathname === item.path && item.section) {
-        document.getElementById(item.section)?.scrollIntoView({ behavior: 'smooth' })
-      } else {
-        navigate(item.path)
-        window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (location.pathname === '/') {
+      const el = item.section ? document.getElementById(item.section) : null
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+        return
       }
+    }
+
+    if (location.pathname === item.path) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
       return
     }
 
-    navigate('/')
-    setTimeout(() => {
-      document.getElementById(item.section)?.scrollIntoView({ behavior: 'smooth' })
-    }, 100)
+    navigate(item.path)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
@@ -170,13 +171,12 @@ export default function Navbar() {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-           className="fixed inset-0 z-[1000] flex flex-col justify-between overflow-y-auto px-6 pb-8 pt-28 sm:px-8 sm:pb-10 sm:pt-32 md:p-12 md:pt-32"
-style={{
-  background: 'rgba(255,255,255,0.85)',
-  backdropFilter: 'blur(24px)',
-}}
-           
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-0 z-[1000] pointer-events-auto flex flex-col justify-between overflow-y-auto px-6 pb-8 pt-28 sm:px-8 sm:pb-10 sm:pt-32 md:p-12 md:pt-32"
+            style={{
+              background: 'rgba(255,255,255,0.96)',
+              backdropFilter: 'blur(24px)',
+            }}
           >
             <div className="flex flex-col gap-5 sm:gap-6 md:gap-8">
               {NAVIGATION.map((item, idx) => (
@@ -184,9 +184,10 @@ style={{
                   key={item.label}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 + idx * 0.05 }}
+                  transition={{ delay: 0.1 + idx * 0.05 }}
                   onClick={() => handleNavClick(item)}
-                  className="border-none bg-transparent text-left font-serif text-[2.4rem] font-medium tracking-tight text-dark transition-all duration-300 hover:text-gold sm:text-[2.8rem] md:text-[3.2rem]"                >
+                  className="border-none bg-transparent text-left font-serif text-[2.4rem] font-medium tracking-tight text-dark transition-all duration-300 hover:text-gold cursor-pointer sm:text-[2.8rem] md:text-[3.2rem]"
+                >
                   {item.label}
                 </motion.button>
               ))}
