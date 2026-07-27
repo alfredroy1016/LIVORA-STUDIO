@@ -82,6 +82,15 @@ npm run build
 
 ---
 
+## Brand assets
+
+- **Favicon:** `public/favicon.jpg` contains the supplied LIVORA logo for the browser tab and Apple touch icon.
+- **HTML integration:** `index.html` references `/favicon.jpg` for both icons.
+
+When replacing the favicon, keep the filename or update both icon links in `index.html`.
+
+---
+
 ## 🎨 Design System
 
 Our design language is rooted in **Professional Luxury**. We use a rhythmic color palette that alternates between sections to guide the user's eye.
@@ -110,7 +119,16 @@ The application is localized for **Sultan Bathery, Wayanad, Kerala**.
 
 ## ✅ Deployment
 
-The project is ready for deployment to any static hosting provider (Vercel, Netlify, etc.) or cPanel. Simply upload the contents of the `dist/` directory after running the build command.
+The production site is available at [livorainteriorstudio.com](https://www.livorainteriorstudio.com/).
+
+The GitHub `main` branch is the deployment source. Push verified changes to it to trigger the connected hosting deployment:
+
+```bash
+npm run build
+git push origin main
+```
+
+For another static host (Vercel, Netlify, or cPanel), deploy the contents of `dist/` after running the build command.
 
 ---
 
