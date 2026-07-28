@@ -1,16 +1,50 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FaWhatsapp, FaPhoneAlt, FaInstagram } from 'react-icons/fa'
+import { FaWhatsapp, FaPhoneAlt, FaInstagram, FaMapMarkerAlt } from 'react-icons/fa'
 
 const WA = 'https://wa.me/918921179724'
 const TEL = 'tel:+918921179724'
 const INSTAGRAM = 'https://www.instagram.com/livora_interior_studio/'
+const LOCATION = 'https://maps.app.goo.gl/TMaUJSXHjRrfVTE26'
 
 export default function FloatingButtons() {
   const [hovered, setHovered] = useState(null)
 
   return (
     <div className="fixed bottom-6 right-6 z-[1000] flex flex-col gap-3.5 items-end">
+      {/* Location Button */}
+      <div className="relative flex items-center group">
+        <AnimatePresence>
+          {hovered === 'location' && (
+            <motion.span
+              initial={{ opacity: 0, x: 20, scale: 0.9 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              exit={{ opacity: 0, x: 10, scale: 0.9 }}
+              className="mr-3 hidden rounded-full border border-white/20 bg-black/60 px-4 py-2 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-white shadow-2xl backdrop-blur-md pointer-events-none sm:block"
+            >
+              Visit our studio
+            </motion.span>
+          )}
+        </AnimatePresence>
+
+        <motion.a
+          href={LOCATION}
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Open our studio location in Google Maps"
+          onMouseEnter={() => setHovered('location')}
+          onMouseLeave={() => setHovered(null)}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="h-[52px] w-[52px] sm:h-[60px] sm:w-[60px] rounded-full border border-white/40 flex items-center justify-center text-white shadow-[0_15px_35px_rgba(220,38,38,0.32)] relative overflow-hidden backdrop-blur-xl transition-all"
+          style={{ background: '#DC2626' }}
+        >
+          <FaMapMarkerAlt size={23} className="relative z-10" />
+        </motion.a>
+      </div>
+
       {/* Instagram Button */}
       <div className="relative flex items-center group">
         <AnimatePresence>
